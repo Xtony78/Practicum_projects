@@ -1,26 +1,21 @@
 # Practicum_projects
 ## Отток клиентов
-### Данные
-Описание данных:
-Признаки
-- RowNumber — индекс строки в данных
-- CustomerId — уникальный идентификатор клиента
-- Surname — фамилия
-- CreditScore — кредитный рейтинг
-- Geography — страна проживания
-- Gender — пол
-- Age — возраст
-- Tenure — сколько лет человек является клиентом банка
-- Balance — баланс на счёте
-- NumOfProducts — количество продуктов банка, используемых клиентом
-- HasCrCard — наличие кредитной карты
-- IsActiveMember — активность клиента
-- EstimatedSalary — предполагаемая зарплата
-Целевой признак
-- Exited — факт ухода клиента
 ### Описание проекта
-Из «Бета-Банка» стали уходить клиенты. Каждый месяц. Немного, но заметно. Банковские маркетологи посчитали: сохранять текущих клиентов дешевле, чем привлекать новых.
 Нужно спрогнозировать, уйдёт клиент из банка в ближайшее время или нет. Предоставлены исторические данные о поведении клиентов и расторжении договоров с банком. 
 Требуется построить модель с предельно большим значением F1-меры. ЧЦелевой показатель метрики до 0.59.
-### Использованные библиотеки 
-pandas, numpy, matplotlib, sklearn
+### Использованные навыки
+- pandas;
+- numpy;
+- matplotlib;
+- sklearn;
+sklearn.model_selection.train_test_split
+ - sklearn.linear_model.LogisticRegression
+ - sklearn.ensemble.RandomForestClassifier
+ - sklearn.tree.DecisionTreeClassifier
+ - sklearn.metrics.accuracy_score,roc_auc_score,f1_score,precision_score, recall_score
+ - sklearn.utils.shuffle
+ - sklearn.preprocessing.OrdinalEncoder
+ - sklearn.metrics.roc_curve
+### Выводы
+Проведено исследование данных, по целевому признаку спрогнозирован результат, протестированы 3 модели, выбрана наиболее подходящая - "Случайный лес", на ней достигнуты требуемые показатели по метрикам.
+
